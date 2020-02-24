@@ -40,7 +40,7 @@
             AVCaptureVideoPreviewLayer *layer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
             self.captureLayer = layer;
             
-            layer.backgroundColor = [UIColor yellowColor].CGColor;
+            layer.backgroundColor = [UIColor blackColor].CGColor;
             [self.layer addSublayer:layer];
             layer.videoGravity = AVLayerVideoGravityResizeAspectFill;
             
@@ -57,7 +57,9 @@
             AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code,
             AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode]];
             
-            [self.session startRunning];
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self.session startRunning];
+            });
 
         } else { 
 
