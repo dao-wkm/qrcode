@@ -62,9 +62,8 @@
             });
 
         } else { 
-
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tips" message:@"Authorization is required to use the camera, please check your permission settings: Settings> Privacy> Camera" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                [alert show];
+            // UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tips" message:@"Authorization is required to use the camera, please check your permission settings: Settings> Privacy> Camera" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            //     [alert show];
         }
     }
     return self;
